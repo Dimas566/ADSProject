@@ -43,15 +43,20 @@ namespace ADSProject.Controllers
         {
             try
             {
-                // Si el ID es 0; entonces se esta insertando
-                if (carrera.id == 0)
+                // Validamos que el modelo carrera sea valido
+                // segun las validaciones que le agregamos anteriormente
+                if (ModelState.IsValid)
                 {
-                    servicio.insertar(carrera);
-                }
-                else
-                {
-                    // Si el ID es distinto de cero entonces estamos modificando
-                    servicio.modificar(carrera.id, carrera);
+                    // Si el ID es 0; entonces se esta insertando
+                    if (carrera.id == 0)
+                    {
+                        servicio.insertar(carrera);
+                    }
+                    else
+                    {
+                        // Si el ID es distinto de cero entonces estamos modificando
+                        servicio.modificar(carrera.id, carrera);
+                    }
                 }
                 return RedirectToAction("Index");
             }
