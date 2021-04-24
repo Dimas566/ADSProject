@@ -34,11 +34,12 @@
         </td>
         <td>
             @Html.ActionLink("Editar", "Form", new { id = item.id, operacion = Operacion.modificar },
-                                                 new { @class = "btn btn-xs btn-warning" }) |
+                                                  new { @class = "btn btn-xs btn-warning" }) |
             @Html.ActionLink("Ver", "Form", new { id = item.id, operacion = Operacion.ver },
-                                             new { @class = "btn btn-xs btn-default" }) |
+                                                   new { @class = "btn btn-xs btn-default" }) |
             @Html.ActionLink("Eliminar", "Delete", new { id = item.id, operacion = Operacion.eliminar },
-                                                     new { @class = "btn btn-xs btn-danger" })
+                                                   new { @class = "btn btn-xs btn-danger eliminar" })
+          
         </td>
     </tr>
 }
