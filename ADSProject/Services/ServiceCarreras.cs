@@ -1,5 +1,6 @@
 ﻿using ADSProject.DAL;
 using ADSProject.Models;
+using ADSProject.Models.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,14 +11,22 @@ namespace ADSProject.Services
     public class ServiceCarreras
     {
         // Instancia para acceder a todos los metodos de la DAL
-        public CarreraDAL carreraDal = new CarreraDAL();
+       // public CarreraDAL carreraDal = new CarreraDAL();
 
         // Para insertar carrera
         public int insertar(Carrera carrera)
         {
             try
             {
-                return carreraDal.insertarCarrera(carrera);
+                // Inicializar el contexto que nos permitirá conectarnos con la BD
+                using (MyDbContext context = new MyDbContext())
+                {
+                    // crear instancia de la DAL
+                    // y se le pasa el contexto de la BD
+                    CarreraDAL dal = new CarreraDAL(context);
+                    // Llamada al método para obtener todos los registros
+                    return dal.insertarCarrera(carrera);
+                }
             }
             catch (Exception ex)
             {
@@ -30,7 +39,15 @@ namespace ADSProject.Services
         {
             try
             {
-                return carreraDal.modificarCarrera(id, carrera);
+                // Inicializar el contexto que nos permitirá conectarnos con la BD
+                using (MyDbContext context = new MyDbContext())
+                {
+                    // crear instancia de la DAL
+                    // y se le pasa el contexto de la BD
+                    CarreraDAL dal = new CarreraDAL(context);
+                    // Llamada al método para obtener todos los registros
+                    return dal.modificarCarrera(id,carrera);
+                }
             }
             catch (Exception ex)
             {
@@ -44,7 +61,15 @@ namespace ADSProject.Services
         {
             try
             {
-                return carreraDal.eliminarCarrera(id);
+                // Inicializar el contexto que nos permitirá conectarnos con la BD
+                using (MyDbContext context = new MyDbContext())
+                {
+                    // crear instancia de la DAL
+                    // y se le pasa el contexto de la BD
+                    CarreraDAL dal = new CarreraDAL(context);
+                    // Llamada al método para obtener todos los registros
+                    return dal.eliminarCarrera(id);
+                }
             }
             catch (Exception ex)
             {
@@ -55,7 +80,21 @@ namespace ADSProject.Services
         // Para obtener todos las carreras.
         public List<Carrera> obtenerTodos()
         {
-            return carreraDal.obtenerTodos();
+            try
+            {
+                // Inicializar el contexto que nos permitirá conectarnos con la BD
+                using( MyDbContext context = new MyDbContext() )
+                {
+                    // crear instancia de la DAL
+                    // y se le pasa el contexto de la BD
+                    CarreraDAL dal = new CarreraDAL(context);
+                    // Llamada al método para obtener todos los registros
+                    return dal.obtenerTodos();
+                }
+            }catch( Exception )
+            {
+                throw;
+            }
         }
 
         // Para obtener por ID.
@@ -63,7 +102,15 @@ namespace ADSProject.Services
         {
             try
             {
-                return carreraDal.obtenerPorID(id);
+                // Inicializar el contexto que nos permitirá conectarnos con la BD
+                using (MyDbContext context = new MyDbContext())
+                {
+                    // crear instancia de la DAL
+                    // y se le pasa el contexto de la BD
+                    CarreraDAL dal = new CarreraDAL(context);
+                    // Llamada al método para obtener todos los registros
+                    return dal.obtenerPorID(id);
+                }
             }
             catch (Exception ex)
             {
