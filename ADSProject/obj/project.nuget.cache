@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "FROsfo7a5JORZpkSUBSc8P6QydZFywm9D9d2YNUlZE1y1J6hbct+8QecRgPBihIV58jA3zLapB0fNt+F2HaTtw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Dimas\\Documents\\Proyectos\\Soluciones\\ADSProject\\ADSProject\\ADSProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dimas\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\Dimas\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Dimas\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\Dimas\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\Dimas\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\Dimas\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}
